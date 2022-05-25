@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'name'                       => env('APP_NAME'),
+    'env'                        => env('APP_ENV'),
+    'debug'                      => env('APP_DEBUG'),
+    'debug_requests'             => env('APP_DEBUG_REQUESTS'),
+    'base_url'                   => env('APP_URL'),
+    'timezone'                   => env('APP_TIMEZONE'),
+    'jwt_algorithm'              => 'HS256',
+    'ddos_open_max_petitions'    => env('DDOS_OPEN_MAX_PETITIONS'),
+    'ddos_open_margin_minutes'   => env('DDOS_OPEN_MARGIN_MINUTES'),
+    'ddos_open_banned_minutes'   => env('DDOS_OPEN_BANNED_MINUTES'),
+    'hash_pass'                  => env('HASH_PASS'),
+    'yaml_spacing'               => env('YAML_SPACING'),
+    'api_log_dir'                => 'logs' . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR,
+    'api_log_channel'            => 'api_input_output',
+    'api_complete_log_dir'       => 'logs' . DIRECTORY_SEPARATOR . 'apicomplete' . DIRECTORY_SEPARATOR,
+    'api_complete_log_channel'   => 'api_complete_log_channel',
+    'http_default_TTL'           => env('HTTP_TIMEOUT', 500),
+    'http_request_retries'       => 3,
+    'http_request_retry_seconds' => 5,
+    'session_duration_minutes'   => env('SESSION_DURATION_MINUTES'),
+    'default_guzzle_log_channel' => 'default_guzzle_client', //config/logging.php
+    'pagination.limit'           => 10,
+    'error'                      => [
+        'generic'       => 1000,
+        'parameters'    => 1001,
+        'curl'          => 1002,
+        'permission'    => 1003,
+        'token'         => 1004,
+        'authorization' => 1005,
+        'sql'           => 1006,
+    ],
+];
